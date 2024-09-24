@@ -9,4 +9,4 @@
 ### Hw1
 [HW1 app.py code](https://github.com/PanYingHan/Database/blob/main/app.py)<br>
 [HW1 html code](https://github.com/PanYingHan/Database/blob/main/index.html)<br>
-[HW1 yt video](https://youtu.be/TTAO4_9QAD8)
+[HW1 YT video](https://youtu.be/TTAO4_9QAD8)
