@@ -7,6 +7,9 @@
 
 ## 作業連結區  
 ### Hw1
-[HW1 app.py code](https://github.com/PanYingHan/Database/blob/main/app.py)<br>
-[HW1 html code](https://github.com/PanYingHan/Database/blob/main/index.html)<br>
+[HW1 code](https://github.com/PanYingHan/Database/tree/main/HW1)<br>
 [HW1 YT video](https://youtu.be/TTAO4_9QAD8)
+### Hw2
+[HW2 code](https://github.com/PanYingHan/Database/tree/main/HW1)<br>
+[HW1 YT video](https://youtu.be/TTAO4_9QAD8)
+
