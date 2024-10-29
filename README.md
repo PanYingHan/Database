@@ -11,5 +11,5 @@
 [HW1 YT video](https://youtu.be/TTAO4_9QAD8)
 ### Hw2
 [HW2 code](https://github.com/PanYingHan/Database/tree/main/HW2)<br>
-[HW2 YT video](https://youtu.be/nSEE9Grhnjk)
+[HW2 YT video](https://youtu.be/Ec99P7rJueU)
 
