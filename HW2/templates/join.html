@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合併紀錄</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #22a2d8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+            width: 90%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table thead {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>合併紀錄</h1>
+    <h2>所有資料</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>顧客 ID</th>
+                <th>姓名</th>
+                <th>職業</th>
+                <th>電話</th>
+                <th>地址</th>
+                <th>購買商品</th>
+                <th>購買數量</th>
+                <th>消費金額</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in joined_records %}
+            <tr>
+                <td>{{ record.customer_id }}</td>
+                <td>{{ record.customer_name }}</td>
+                <td>{{ record.customer_occupation }}</td>
+                <td>{{ record.contact_phone }}</td>
+                <td>{{ record.contact_address }}</td>
+                <td>{{ record.order_product }}</td>
+                <td>{{ record.order_quantity }}</td>
+                <td>{{ record.order_amount }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/"><button>返回首頁</button></a>
+</body>
+</html>

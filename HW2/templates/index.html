@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物紀錄系統</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #22a2d8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        form, table {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        table thead {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>購物紀錄系統</h1>
+    
+    <!-- 顧客資料表單 -->
+    <form action="/add" method="POST">
+        <div class="form-row">
+            <input type="text" name="name" placeholder="姓名" required>
+            <input type="text" name="occupation" placeholder="職業" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="phone" placeholder="電話" required>
+            <input type="text" name="address" placeholder="地址" required>
+        </div>
+        <div class="form-row">
+            <input type="text" name="product" placeholder="購買商品" required>
+            <input type="number" name="quantity" placeholder="購買數量" required>
+            <input type="number" name="amount" placeholder="消費金額" required>
+        </div>
+        <button type="submit">新增紀錄</button>
+    </form>
+
+    <!-- 顯示 Customer 表 -->
+    <h2>顧客資料</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>職業</th>
+                <th>動作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+            <tr>
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.occupation }}</td>
+                <td>
+                    <form action="/delete/{{ customer.id }}" method="POST" style="display:inline;">
+                        <button type="submit">刪除</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- 顯示 Contact 表 -->
+    <h2>聯絡資訊</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>顧客 ID</th>
+                <th>電話</th>
+                <th>地址</th>
+                <th>動作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.id }}</td>
+                <td>{{ contact.customer_id }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.address }}</td>
+                <td>
+                    <form action="/delete/{{ contact.customer_id }}" method="POST" style="display:inline;">
+                        <button type="submit">刪除</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- 顯示 CustomerOrder 表 -->
+    <h2>訂單紀錄</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>顧客 ID</th>
+                <th>購買商品</th>
+                <th>購買數量</th>
+                <th>消費金額</th>
+                <th>動作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.customer_id }}</td>
+                <td>{{ order.product }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>{{ order.amount }}</td>
+                <td>
+                    <form action="/delete/{{ order.customer_id }}" method="POST" style="display:inline;">
+                        <button type="submit">刪除</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- 添加 JOIN 按鈕 -->
+    <h2><a href="/join"><button>查看合併紀錄</button></a></h2>
+</body>
+</html>
