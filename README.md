@@ -1,9 +1,9 @@
 # 台師大科技系 資料庫系統
-授課教師：蔡芸琤老師
+### 授課教師：蔡芸琤老師
 
-姓名：潘穎翰   
+### 姓名：潘穎翰   
 
-系級：科技系3年級  
+### 系級：科技系3年級  
 
 ## Course slides
 [上課投影片 Week 1](https://docs.google.com/presentation/d/1BPNsQtDIZIOH6s35TtE4y9u0ZLBTJjwblICJ7umgAGs/edit#slide=id.g23dd2219a46_0_124)<br>
