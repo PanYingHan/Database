@@ -3,7 +3,7 @@
 ### 姓名：潘穎翰   
 ### 系級：科技系3年級  
 
-# Course slides
+# 教學檔案
 [上課投影片 Week 1](https://docs.google.com/presentation/d/1BPNsQtDIZIOH6s35TtE4y9u0ZLBTJjwblICJ7umgAGs/edit#slide=id.g23dd2219a46_0_124)<br>
 [上課投影片 Week 2](https://docs.google.com/presentation/d/17RvKJkc6k4TIbIObdTClapRRBklTYxEHl6MXqazSvMA/edit#slide=id.g23dd2219a46_0_124)<br>
 [上課投影片 Week 3](https://docs.google.com/presentation/d/1HFphBEPWo5wiRR42c9BLcsLX5CcqrIAQP40djYcmxbY/edit#slide=id.g23dd2219a46_0_124)<br>
