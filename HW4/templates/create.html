@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增購物紀錄</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #b3b3e6;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>新增購物紀錄</h1>
+    <form method="POST" action="/create">
+        <label for="name">姓名:</label>
+        <input type="text" id="name" name="name" placeholder="輸入姓名" required>
+        <label for="product">購買商品:</label>
+        <input type="text" id="product" name="product" placeholder="輸入購買商品" required>
+        <label for="quantity">購買數量:</label>
+        <input type="number" id="quantity" name="quantity" min="1" placeholder="輸入購買數量" required>
+        <label for="amount">消費金額:</label>
+        <input type="number" id="amount" name="amount" step="1" min="0" placeholder="輸入消費金額" required>
+        <button type="submit">提交</button>
+    </form>
+    <a href="/">回首頁</a>
+</body>
+</html>
