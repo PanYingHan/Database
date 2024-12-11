@@ -28,7 +28,7 @@
 [HW3 code](https://github.com/PanYingHan/Database/tree/main/HW3)<br>
 [HW3 YT video](https://youtu.be/gpHIxn7WK0k)
 ### Hw3
-[HW4 code](https://github.com/PanYingHan/Database/tree/main/HW3)<br>
+[HW4 code](https://github.com/PanYingHan/Database/tree/main/HW4)<br>
 [HW4 YT video](https://youtu.be/gpHIxn7WK0k)
 
 
